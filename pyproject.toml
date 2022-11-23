@@ -9,8 +9,8 @@ additional-compiled-static-assets = [
 ]
 
 [project]
-name = "furo"
-description = "A clean customisable Sphinx documentation theme."
+name = "pycord-furo"
+description = "A fork of the furo theme customized for pycord."
 dynamic = ["version"]
 readme = "README.md"
 
@@ -24,7 +24,7 @@ dependencies = [
 
 license = { file = "LICENSE"}
 authors = [
-    {name = "Pradyun Gedam", email = "mail@pradyunsg.me"},
+    {name = "BobDotCom", email = "bobdotcomgt@gmail.com"},
 ]
 classifiers = [
   "Framework :: Sphinx",
@@ -48,4 +48,4 @@ classifiers = [
 "sphinx.html_themes" = {furo = "furo"}
 
 [project.urls]
-GitHub = "https://github.com/pradyunsg/furo"
+GitHub = "https://github.com/BobDotCom/furo"
