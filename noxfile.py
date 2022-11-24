@@ -106,7 +106,7 @@ def test(session):
 def release(session):
     version_file = f"src/{PACKAGE_NAME}/__init__.py"
     allowed_upstreams = [
-        f"git@github.com:BobDotCom/{PACKAGE_NAME.replace('_', '-')}.git"
+        f"git@github.com:pradyunsg/{PACKAGE_NAME.replace('_', '-')}.git"
     ]
 
     release_version, next_version = get_release_versions(version_file)
@@ -123,7 +123,7 @@ def release(session):
     session.run("release-helper", "version-check-validity", next_version)
     session.run("release-helper", "directory-check-empty", "dist")
 
-    session.run("release-helper", "git-check-branch", "temp")
+    session.run("release-helper", "git-check-branch", "main")
     session.run("release-helper", "git-check-clean")
     session.run("release-helper", "git-check-tag", release_version, "--does-not-exist")
     session.run("release-helper", "git-check-remote", "origin", *allowed_upstreams)
